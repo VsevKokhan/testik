@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Всё везём — Ваш груз, наша забота</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+    .content-wrapper { flex: 1 0 auto; }
+    .footer { flex-shrink: 0; background: #000; color: #fff; padding: 1rem 0; text-align: center; font-size: 0.9rem; }
+    .service-card { cursor: pointer; transition: transform 0.2s; }
+    .service-card:hover { transform: scale(1.02); }
+  </style>
+</head>
+<body>
+<div class="content-wrapper">
+  <header class="hero-section">
+    <div class="container text-center py-5">
+      <h1 class="display-3">Всё везём</h1>
+      <p class="lead">Надёжные перевозки с 2020 года.<br />Ваш груз — наша забота. Быстро, качественно и по выгодной цене.</p>
+    </div>
+  </header>
+
+  <section class="services-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <img src="images/photo1.jpg" class="card-img-top" alt="Переезды" />
+            <div class="card-body">
+              <h5 class="card-title">Переезды</h5>
+              <p class="card-text">Профессиональные услуги по переезду квартир, офисов и дач.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <img src="images/photo2.jpg" class="card-img-top" alt="Доставка" />
+            <div class="card-body">
+              <h5 class="card-title">Доставка</h5>
+              <p class="card-text">Быстрая доставка по городу и междугородняя перевозка.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card service-card">
+            <img src="images/photo3.jpg" class="card-img-top" alt="Логистика" />
+            <div class="card-body">
+              <h5 class="card-title">Логистика</h5>
+              <p class="card-text">Оптимизация маршрутов и контроль безопасности.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calc-section" class="calc-section pb-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Рассчитать стоимость перевозки</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div id="promoCarousel" class="carousel slide promo-block" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="promo-slide">
+                  <div class="promo-image">тут будет фото 1</div>
+                  <p class="promo-item">🎁 2 грузчика бесплатно при заказе от 5 часов</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="promo-slide">
+                  <div class="promo-image">тут будет фото 2</div>
+                  <p class="promo-item">🔥 Скидка 10% на первое обращение</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="promo-slide">
+                  <div class="promo-image">тут будет фото 3</div>
+                  <p class="promo-item">🚚 Бесплатная бонгов при заказе от 5г !!!!!</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#promoCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#promoCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <form id="calcForm" class="calc-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Тип работы:</label>
+                <select class="form-control" id="jobType" required>
+                  <option value="">Выберите</option>
+                  <option value="withLoaders">Грузчики + машина</option>
+                  <option value="onlyTruck">Только машина</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6" id="truckTypeGroup" style="display:none">
+                <label>Тип машины:</label>
+                <select class="form-control" id="truckType">
+                  <option value="">Выберите</option>
+                  <option value="1.5">1.5 т</option>
+                  <option value="3">3 т</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Откуда:</label>
+                <input type="text" class="form-control" id="fromAddress" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Куда:</label>
+                <input type="text" class="form-control" id="toAddress" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Время подачи:</label>
+                <input type="datetime-local" class="form-control" id="startTime" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label>Комментарий:</label>
+                <textarea class="form-control" id="comment" rows="1"></textarea>
+              </div>
+            </div>
+            <div class="form-row align-items-center">
+              <div class="form-group col-md-6">
+                <label>Оплата:</label>
+                <select class="form-control" id="paymentType" required>
+                  <option value="">Выберите</option>
+                  <option value="cash">Наличные</option>
+                  <option value="card">По карте</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6 text-right">
+                <button type="submit" class="btn btn-warning btn-lg">Рассчитать</button>
+              </div>
+            </div>
+          </form>
+
+          <div id="resultBox" class="result-box mt-4" style="display:none;">
+            <h4>Результат</h4>
+            <p>Тип работы: <strong id="resType"></strong></p>
+            <p>Машина: <strong id="resTruckType"></strong></p>
+            <p>Откуда→Куда: <strong id="resFrom"></strong> → <strong id="resTo"></strong></p>
+            <p>Время: <strong id="resTime"></strong></p>
+            <p>Комментарий: <strong id="resComment"></strong></p>
+            <hr />
+            <p class="lead">💰 Стоимость: <strong id="resCost"></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section py-5">
+    <div class="container text-center">
+      <h2>Почему выбирают нас?</h2>
+      <p class="lead">Мы работаем с 2020 года и завоевали доверие тысяч клиентов.</p>
+      <div class="row">
+        <div class="col-md-4"><h5>Надёжность</h5><p>Гарантия целостности груза.</p></div>
+        <div class="col-md-4"><h5>Скорость</h5><p>Оптимизированные маршруты и сроки.</p></div>
+        <div class="col-md-4"><h5>Доступность</h5><p>Честные цены и прозрачные условия.</p></div>
+      </div>
+      <div class="mt-5">
+        <h4>Наш автопарк и команда — залог вашего успеха!</h4>
+        <p>Работаем с 2020 года, совершенствуем сервис каждый день.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>© 2025 Всё везём — качественные услуги перевозки и логистики</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  $('#jobType').on('change', function(){
+    if (this.value==='onlyTruck') $('#truckTypeGroup').slideDown();
+    else { $('#truckTypeGroup').slideUp().find('select').val(''); }
+  });
+
+  $('#calcForm').on('submit', function(e){
+    e.preventDefault();
+    const type = $('#jobType').val(),
+      truckType = $('#truckType').val()||'—',
+      from = $('#fromAddress').val(),
+      to = $('#toAddress').val(),
+      time = $('#startTime').val().replace('T',' '),
+      comment = $('#comment').val()||'—';
+    let cost = type==='onlyTruck' ? (truckType==='3' ? 2000 : 1500) : 1000;
+    $('#resType').text(type==='onlyTruck'?'Только машина':'Грузчики + машина');
+    $('#resTruckType').text(truckType + (type==='onlyTruck'?' т':'' ));
+    $('#resFrom').text(from); $('#resTo').text(to);
+    $('#resTime').text(time); $('#resComment').text(comment);
+    $('#resCost').text(cost+' ₽');
+    $('#resultBox').fadeIn();
+    $('html,body').animate({scrollTop:$('#resultBox').offset().top-20},600);
+  });
+
+  $('.service-card').on('click', function(e){
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $('#calc-section').offset().top - 20 }, 800);
+  });
+</script>
+</body>
+</html>
