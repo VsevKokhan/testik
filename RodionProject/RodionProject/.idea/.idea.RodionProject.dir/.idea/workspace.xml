@@ -10,36 +10,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c07d896b-5a18-489e-8a0c-64288bbabaed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ServerDockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RodionProject.sln" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Promo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/_ViewStart.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wwwroot/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RodionProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RodionProject.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ErrorViewModel.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RodionProject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RodionProject.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/Error.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/images/photo1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/images/photo3.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "VsevKokhan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VsevKokhan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/VsevKokhan/testik",
-    "accountId": "91e00ae4-f063-4fc2-a1ff-74fc73eb509f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VsevKokhan/testik&quot;,
+    &quot;accountId&quot;: &quot;91e00ae4-f063-4fc2-a1ff-74fc73eb509f&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d7e358b8ed2d495c94ee53983ff4e8bb3b8a0/df/a3082d0c/RazorPage.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="35eGZQi8XBponYFykXn4ERV9lnQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,6 +63,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.RodionProject: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -57,7 +74,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.RodionProject: IIS Express">
+  <component name="RunManager" selected=".NET Launch Settings Profile.RodionProject: http">
     <configuration name="RodionProject: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/RodionProject.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -113,6 +130,9 @@
       <option name="presentableId" value="Default" />
       <updated>1763463181740</updated>
       <workItem from="1763463183399" duration="1615000" />
+      <workItem from="1763476598952" duration="315000" />
+      <workItem from="1763699484929" duration="5483000" />
+      <workItem from="1763876078759" duration="12794000" />
     </task>
     <servers />
   </component>

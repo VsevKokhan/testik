@@ -1,0 +1,22 @@
+/* _content/RodionProject/Views/Shared/_Layout.cshtml.rz.scp.css */
+.promo-card[b-1259aqkytl] {
+    background-color: #fff;       /* белый фон */
+    border-radius: 15px;          /* скругление */
+    padding: 20px;                /* внутренние отступы */
+    transition: transform 0.3s, box-shadow 0.3s;  /* плавный hover */
+    text-align: center;
+}
+.promo-card:hover[b-1259aqkytl] {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.promo-card img[b-1259aqkytl] {
+    border-radius: 10px;
+    width: 100%;                  /* чтобы картинка заполняла карточку */
+    height: 150px;                /* фиксированная высота */
+    object-fit: cover;            /* обрезка по размеру */
+}
+.promo-item[b-1259aqkytl] {
+    color: #ffc107;               /* желтый текст */
+    font-size: 1.1rem;
+}

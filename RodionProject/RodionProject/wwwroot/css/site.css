@@ -1,141 +1,61 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfdfd;
-}
-
-/* Шапка */
-.hero-section {
-  background: linear-gradient(135deg, #ffe066, #ffc107);
-  padding: 40px 0 60px;
-  text-align: center;
-}
-.header-container {
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  max-width: 800px;
-  margin: 0 auto;
-}
-.header-container h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-.header-container .lead {
-  font-size: 1.2rem;
-  margin-top: 15px;
-}
-
-/* Сервисы */
-.service-card {
-  border: none;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-.service-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-.card-img-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-/* Секция калькулятора + акции */
-.calc-section {
-  background-color: #f8f9fa;
-  padding: 60px 0;
-}
-.promo-block {
-  background-color: #ffffff;
-  border: 1px solid #e2e2e2;
+/* Карточки акций */
+.promo-card {
+  background-color: #fff;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
 }
-.promo-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #212529;
-  margin-bottom: 15px;
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+
+.promo-img {
+  width: 100%;
+  height: auto;      /* Не обрезает картинку */
+  border-radius: 10px;
+}
+
 .promo-item {
-  font-size: 1.125rem;
   color: #ffc107;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-/* Ваши существующие стили результата, модалки и футера */
-.input-highlight { /* … */ }
-.result-box { /* … */ }
-.modal-content { /* … */ }
-.btn-outline-warning { /* … */ }
-.info-section h2 { /* … */ }
-.footer { /* … */ }
+.calculator-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  max-width: 380px;
+}
 
-/* ========== ДОБАВЛЕНИЯ ========== */
-/* карусель промо */
-.promo-block.carousel {
-  padding: 0;
-  border: none;
-  box-shadow: none;
-}
-.promo-slide {
-  padding: 20px;
-  border-radius: 15px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-}
-.promo-image {
-  height: 100px;
-  margin-bottom: 10px;
-  background: #f0f0f0;
-  border-radius: 10px;
+.calculator-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  font-size: 0.9rem;
+  justify-content: flex-end; /* Отправляем вправо */
 }
 
-/* форма расчёта */
-.calc-form {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.calc-form .form-control {
-  border-radius: 10px;
-}
-.calc-form label {
-  font-weight: 600;
-}
-.calc-form .btn-lg {
-  border-radius: 50px;
-  padding: 10px 0;
+.hero-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  background: black;      /* ЧЁРНЫЙ ФОН ПОД ЛОГО */
+  padding: 10px;          /* Немного воздуха вокруг изображения */
+  border-radius: 10px;    /* Опционально — скругление */
 }
 
-/* результат */
-.result-box {
-  border-radius: 15px;
-}
-.footer {
-  background-color: #000;      /* черный фон */
-  color: #fff;                 /* белый текст */
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;              /* центр по горизонтали */
-  padding: 10px 20px;          /* вертикальный и горизонтальный отступ */
-  text-align: center;          /* выравнивание текста по центру */
-}
-.footer-container p {
+/* Убираем стрелочки в Chrome, Edge и других WebKit-браузерах */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  font-size: 0.875rem;         /* чуть меньше основного текста */
-  line-height: 1.4;
+}
+
+/* Убираем стрелки в Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

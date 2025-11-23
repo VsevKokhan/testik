@@ -15,7 +15,14 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        var promos = new List<Promo>
+        {
+            new Promo { ImageUrl = "/images/photo1.png", Text = "🎁 2 грузчика бесплатно при заказе от 5 часов" },
+            new Promo { ImageUrl = "/images/photo2.jpg", Text = "🔥 Скидка 10% на первое обращение" },
+            new Promo { ImageUrl = "/images/photo3.png", Text = "🚚 Бесплатная подача при заказе от 5 часов" }
+        };
+
+        return View(promos);
     }
 
     [HttpPost]
