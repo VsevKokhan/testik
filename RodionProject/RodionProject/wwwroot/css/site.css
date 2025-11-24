@@ -48,6 +48,31 @@
   border-radius: 10px;    /* Опционально — скругление */
 }
 
+
+/* ошибки */
+.invalid-feedback {
+  color: #ff4d4f;          /* красный текст */
+  font-weight: 500;         /* чуть легче, чем жирный */
+  font-size: 0.85rem;       /* немного меньше */
+  background: rgba(255, 77, 79, 0.05); /* очень светлый красный фон */
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+
+  /* Плавное появление */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Активное состояние ошибки */
+input.is-invalid ~ .invalid-feedback,
+select.is-invalid ~ .invalid-feedback {
+  opacity: 1;
+  max-height: 100px; /* достаточно для текста */
+}
+
 /* Убираем стрелочки в Chrome, Edge и других WebKit-браузерах */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

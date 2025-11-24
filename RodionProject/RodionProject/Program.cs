@@ -4,8 +4,6 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Environment.SetEnvironmentVariable("ASPNETCORE_URLS", "http://0.0.0.0:5000");
-
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.

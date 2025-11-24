@@ -66,29 +66,33 @@
                 <!-- Место назначения -->
                 <div class="mb-3">
                     <label class="form-label">Место назначения</label>
-                    <input type="text" class="form-control" id="placeTo" placeholder="Куда едем?" required>
+                    <input type="text" class="form-control" id="placeTo" placeholder="Куда едем?">
+                    <div class="invalid-feedback">Введите место назначения</div>
                 </div>
 
                 <!-- Количество грузчиков -->
                 <div class="mb-3">
                     <label class="form-label">Кол-во грузчиков</label>
-                    <input type="number" class="form-control" id="loaders" placeholder="Например: 2">
+                    <input type="number" class="form-control" id="loaders" placeholder="Сколько человек потребуется?">
+                    <div class="invalid-feedback">Введите кол-во грузчиков</div>
                 </div>
 
                 <!-- Время работы грузчиков -->
                 <div class="mb-3">
                     <label class="form-label">Время работы (часы)</label>
-                    <input type="number" class="form-control" id="hours" value="1" min="1">
+                    <input type="number" class="form-control" id="hours" value="2" min="2" placeholder="Минимальный заказ от 2-х часов">
+                    <div class="invalid-feedback">Введите время работы (от 2 часов!)</div>
                 </div>
 
                 <!-- Тип машины -->
                 <div class="mb-3">
                     <label class="form-label">Тип машины</label>
                     <select class="form-select" id="carType">
-                        <option value="gazel">Газель 1.5 т</option>
+                        <option value="gazel" selected >Газель 1.5 т</option>
                         <option value="fura">Фура</option>
                         <option value="buk">Бычок 3.5 т</option>
                     </select>
+                    
                 </div>
 
                 <button type="button" class="btn btn-primary w-100" onclick="calculateCost()">
@@ -105,6 +109,22 @@
 
     </div>
 </section>
+
+<!-- ========================================= -->
+<!-- ФУТЕР (ПОДВАЛ САЙТА)                      -->
+<!-- ========================================= -->
+<footer class="bg-dark text-white mt-5">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; @DateTime.Now.Year Всё везём. Надёжные перевозки.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p>Контакты: +7 777 77 77 | Email: info@vsevezem.ru | Avito: link</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!-- ========================================= -->
@@ -124,28 +144,41 @@
 
         let hasError = false;
 
+        //Место назначения
         if (placeTo.value.trim() === "") {
-            alert("Пожалуйста, введите место назначения.");
-            placeTo.focus()
+            placeTo.classList.add("is-invalid");
+            hasError = true;
+        } 
+        else {
+            placeTo.classList.remove("is-invalid");
+        }
+
+        // Тип машины
+        if (carType.value.trim() === "") {
+            carType.classList.add("is-invalid")
             hasError = true;
         }
-        else if (carType.value.trim() === "") {
-            alert("Пожалуйста, выберете машину нужного формата.");
-            carType.focus();
-            hasError = true;
+        else {
+            carType.classList.remove("is-invalid");
         }
+        
         // Проверка: Грузчики - валидное число > 0
-        else if (isNaN(parseInt(loaders.value)) || parseInt(loaders.value) <= 0) {
-            alert("Пожалуйста, введите корректное количество грузчиков.");
-            loaders.focus();
+        if (isNaN(parseInt(loaders.value)) || parseInt(loaders.value) <= 0) {
+            loaders.classList.add("is-invalid")
             hasError = true;
+        }
+        else {
+            loaders.classList.remove("is-invalid");
         }
         // Проверка: Часы - валидное число > 0
-        else if (isNaN(parseInt(hours.value)) || parseInt(hours.value) <= 0) {
-            alert("Пожалуйста, введите корректное время работы (часы).");
-            hours.focus();
+        if (isNaN(parseInt(hours.value)) || parseInt(hours.value) <= 1) {
+            hours.classList.add("is-invalid")
             hasError = true;
         }
+        else {
+            hours.classList.remove("is-invalid")
+        }
+        
 
         // Если была обнаружена хоть одна ошибка, останавливаем выполнение
         if (hasError) {
